@@ -1,9 +1,12 @@
 <style>
   .btn-search {
-    background-color: #fe424d;
+    background-color: #dd91f6;
     color: #fff;
     border: 20px;
     padding: 0 1rem 0 1rem;
+  }
+  .logo{
+    color: #fe424d;
   }
   .btn-search i{
     display: inline;
@@ -16,20 +19,24 @@
   }
 </style>
 
-<nav class="navbar navbar-expand-md  border-bottom sticky-top">
+<nav class="navbar navbar-expand-md border-bottom sticky-top">
   <div class="container-fluid bg-light">
-    <a class="navbar-brand" href="/listings"
-      ><i class="fa-solid logo fa-globe"></i></a>
+    <a class="navbar-brand" href="/listings">
+      <i class="fa-solid logo fa-globe"></i>
+    </a>
     <button
       class="navbar-toggler"
       type="button"
       data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
+      data-bs-target="#navbarNav"  
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse">
-      <div class="navbar-nav">
+    <div class="collapse navbar-collapse" id="navbarNav"> 
+        <div class="navbar-nav">
         <a class="nav-link m-2" href="/listings">Explore TripTales</a>
       </div>
       <div class="navbar-nav ms-auto">
@@ -39,7 +46,7 @@
             type="search"
             placeholder="Search Destination"
           />
-          <button class="btn btn-search" type="submit">
+          <button class="btn btn-search btn-search" type="submit">
             <i class="fa-solid fa-magnifying-glass"></i> Search
           </button>
         </form>
@@ -49,7 +56,8 @@
         <% if(!currUser) { %>
         <a class="nav-link m-2" href="/signup"><i class="fa-solid fa-user-plus">SignUp</i></a>
         <a class="nav-link m-2" href="/signin"><i class="fa-solid fa-right-to-bracket">SignIn</i></a>
-        <% } %> <% if(currUser) { %>
+        <% } %>
+        <% if(currUser) { %>
         <a class="nav-link m-2" href="/signout"><i class="fa-solid fa-arrow-right-from-bracket">Sign Out</i></a>
         <% } %>
       </div>
