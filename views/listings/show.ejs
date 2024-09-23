@@ -93,7 +93,7 @@
       <p class="starability-result card-text" data-rating="<%= review.rating %>"><%= review.rating %> stars</p>
       <p class="card-text"><%= review.comment %></p>
       
-      <% if(review.author._id.equals(currUser._id)) { %>
+      <% if(review.author._id.toString() === currUser._id.toString()) { %>
       <form
         class="mb-3"
         method="POST"
