@@ -93,7 +93,7 @@
       <p class="starability-result card-text" data-rating="<%= review.rating %>"><%= review.rating %> stars</p>
       <p class="card-text"><%= review.comment %></p>
       
-
+      <% if(review.author) { %>
       <form
         class="mb-3"
         method="POST"
@@ -101,6 +101,7 @@
       >
         <button class="btn btn-dark">Delete</button>
       </form>
+      <% } %>
     </div>
    <% } %>
   </div>
