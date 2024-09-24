@@ -17,7 +17,8 @@ const passport = require("passport");
 const LocalStraregy = require("passport-local");
 const User = require("./models/user.js");
 const userRouter = require("./routes/user.js");
-const db_URL = process.env.ATLASDB_URL
+const db_URL = process.env.ATLASDB_URL;
+const url = process.env.M_URL;
 
 
 main()
