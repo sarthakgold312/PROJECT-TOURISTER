@@ -27,11 +27,14 @@
       box-shadow: 1 2px 5px rgba(0,0,0,0.1);
       border-radius: 20px;
     }
+<<<<<<< HEAD
     .filter.active {
       background-color: #007bff;
       color: white;
     }
     
+=======
+>>>>>>> 8d3db8f4273324a1c5f22444f9a4bbfc509e440d
     .filters::-webkit-scrollbar {
       display: none;
     }
@@ -48,6 +51,7 @@
       width: 100%;
       height: 30rem;
       object-fit: cover;
+<<<<<<< HEAD
     }
 
 
@@ -84,6 +88,10 @@
       height: 20rem;
       object-fit: cover;
     }
+=======
+    }
+
+>>>>>>> 8d3db8f4273324a1c5f22444f9a4bbfc509e440d
     
 
   </style>
@@ -91,12 +99,18 @@
 
   <!-- Horizontal Scrolling Menu -->
 
+<<<<<<< HEAD
   
   <div class="filters" id="filters">
     <div class="filter" data-category="all">
+=======
+  <div class="filters" id="filters">
+    <div class="filter ">
+>>>>>>> 8d3db8f4273324a1c5f22444f9a4bbfc509e440d
       <div><i class="fa-solid fa-fire"></i></div>
       <p>All</p>
     </div>
+<<<<<<< HEAD
 
     <div class="filter" data-category="Apartment">
       <div><i class="fa-solid fa-fire"></i></div>
@@ -151,6 +165,57 @@
       <p>Domes</p>
     </div>
     <div class="filter " data-category="Apartment">
+=======
+    <div class="filter ">
+      <div><i class="fa-solid fa-bed"></i></div>
+      <p>Rooms</p>
+    </div>
+    <div class="filter ">
+      <div><i class="fa-solid fa-mountain-city"></i></div>
+      <p>Iconic Cities</p>
+    </div>
+    <div class="filter ">
+      <div><i class="fa-solid fa-mountain-sun"></i></div>
+      <p>Mountain</p>
+    </div>
+    <div class="filter ">
+      <div><i class="fa-brands fa-fort-awesome"></i></div>
+      <p>Castles</p>
+    </div>
+    <div class="filter ">
+      <div><i class="fa-solid fa-person-swimming"></i></div>
+      <p>Amazing Pools</p>
+    </div>
+    <div class="filter ">
+      <div><i class="fa-solid fa-tractor"></i></div>
+      <p>Farms</p>
+    </div>
+    <div class="filter ">
+      <div><i class="fa-solid fa-landmark-dome"></i></div>
+      <p>Historical Homes</p>
+    </div>
+    <div class="filter ">
+      <div><i class="fa-solid fa-campground"></i></div>
+      <p>Camping</p>
+    </div>
+    <div class="filter ">
+      <div><i class="fa-solid fa-snowman"></i></div>
+      <p>Arctic</p>
+    </div>
+    <div class="filter ">
+      <div><i class="fa-solid fa-umbrella-beach"></i></div>
+      <p>Beach</p>
+    </div>
+    <div class="filter ">
+      <div><i class="fa-solid fa-house-user"></i></div>
+      <p>Tiny Homes</p>
+    </div>
+    <div class="filter ">
+      <div><i class="fa-solid fa-igloo"></i></div>
+      <p>Domes</p>
+    </div>
+    <div class="filter ">
+>>>>>>> 8d3db8f4273324a1c5f22444f9a4bbfc509e440d
       <div><i class="fa-solid fa-sailboat"></i></div>
       <p>Boats</p>
     </div>
@@ -209,7 +274,10 @@
       </button>
     </div>
 
+<<<<<<< HEAD
     
+=======
+>>>>>>> 8d3db8f4273324a1c5f22444f9a4bbfc509e440d
 
   <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
     <% for(let listing of allListings){ %>
@@ -227,8 +295,12 @@
         <div class="card-body ms-3">
           <p class="card-text">
             <b><%=listing.title %></b> <br />
+<<<<<<< HEAD
             <p><%= listing.location %>,<%= listing.country %></p>
             <p> Category :<%= listing.category %></p>
+=======
+            <p><%= listing.location %>, <%= listing.country %></p>
+>>>>>>> 8d3db8f4273324a1c5f22444f9a4bbfc509e440d
             <p><i class="fa-solid fa-signs-post"><%= listing.owner.username %></i></p>
           </p>
         </div>
@@ -236,6 +308,7 @@
     </a>
     <% } %>
   </div>
+<<<<<<< HEAD
 
   <script>
     const filters = document.querySelectorAll('.filter');
@@ -265,4 +338,6 @@
       });
     });
   </script>
+=======
+>>>>>>> 8d3db8f4273324a1c5f22444f9a4bbfc509e440d
 </body>

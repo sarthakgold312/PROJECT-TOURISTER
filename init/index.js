@@ -1,8 +1,9 @@
 const mongoose = require("mongoose");
 const initdata = require("./data.js");
 const Listing = require("../models/listing.js");
+const DB_URL = process.env.ATLASDB_URL;
+const url = process.env.M_URL; 
 
-// const URL_ = "mongodb://127.0.0.1:27017/TripTales";
 
 main()
   .then(() => {
@@ -13,8 +14,11 @@ main()
   });
 
 async function main() {
-  await mongoose.connect('mongodb+srv://aryaappatel:dNtk7C3fKFsiAP7D@cluster0.ilflx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
-};
+  await mongoose.connect("mongodb+srv://aryaappatel:dNtk7C3fKFsiAP7D@cluster0.ilflx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
+}
+
+
+
 
 const initDB = async()=>{
     await Listing.deleteMany({});

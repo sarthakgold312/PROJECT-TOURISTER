@@ -66,18 +66,16 @@
         </div>
       </div>
       <div class="mb-3">
-        <label for="category" class="form-label">Category</label>
+        <label for="location" class="form-label">Location</label>
         <input
-          name="listing[category]"
-          placeholder="Enter Category"
-          type="text"
+          name="listing[location]"
+          value="<%= listing.location %>"
           class="form-control"
-          value="<%= listing.category %>"
+          type="text"
           required
         />
-        <div class="invalid-feedback">Enter Category of this Location</div>
+        <div class="invalid-feedback">Location should be valid!</div>
       </div>
-     
       <button class="btn btn-dark edit-btn mt-3">Edit</button>
     </form>
   </div>
