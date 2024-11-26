@@ -1,7 +1,7 @@
 const Listing = require("../models/listing");
 
 module.exports.index = async (req, res) => {
-  const allListings = await Listing.find({});
+  const allListings = await Listing.find({}).populate("owner");;
   res.render("listings/index.ejs", { allListings });
 };
 
@@ -68,4 +68,26 @@ module.exports.showListing =  async (req, res) => {
     let deletedListing = await Listing.findByIdAndDelete(id);
     req.flash("success", "Listing Deleted!");
     res.redirect("/listings");
+  };
+
+
+  module.exports.searchListings = async(req, res) => {
+    const query = req.query.query.trim().toLowerCase();
+
+    if(!query){
+      return res.redirect('/listings');
+    }
+    try{
+      const allListings = await Listing.find({
+        $or:[
+          { title: {$regex : query, $options : 'i'}},
+          { location: {$regex : query, $options : 'i'}},
+          { category: {$regex : query, $options : 'i'}},
+        ],
+      });
+      res.render('listings', {allListings, query});
+    }catch (err) {
+      console.log(err);
+      res.status(500).send('Server Error.');
+    }
   };
