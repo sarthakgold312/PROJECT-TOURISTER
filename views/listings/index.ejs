@@ -21,11 +21,12 @@
       display: inline;
       text-align: center;
       padding: 10px 20px;
+      width: 200px;
       margin: 0 10px;
       font-size: 20px;
       background: #fff;
       box-shadow: 1 2px 5px rgba(0,0,0,0.1);
-      border-radius: 20px;
+      border-radius: 10px;
     }
     .filter.active {
       background-color: #007bff;
@@ -49,8 +50,6 @@
       height: 30rem;
       object-fit: cover;
     }
-
-
 
     .row {
       display:flex;
@@ -98,62 +97,88 @@
       <p>All</p>
     </div>
 
-    <div class="filter" data-category="Apartment">
-      <div><i class="fa-solid fa-fire"></i></div>
+    <div class="filter" data-category="Luxury">
+      <div><i class="fa-solid fa-gem"></i></div>
+      <p>Luxury Stays</p>
+    </div>
+    <div class="filter" data-category="Caves">
+      <div><i class="fa-solid fa-water"></i></div>
+      <p>Caves</p>
+    </div>
+    <div class="filter" data-category="Jungle">
+      <div><i class="fa-solid fa-tree"></i></div>
+      <p>Jungle Retreats</p>
+    </div>
+    <div class="filter" data-category="Desert">
+      <div><i class="fa-solid fa-sun"></i></div>
+      <p>Desert Adventures</p>
+    </div>
+    <div class="filter" data-category="Islands">
+      <div><i class="fa-solid fa-mountain"></i></div>
+      <p>Islands</p>
+    </div>
+    <div class="filter" data-category="Vineyards">
+      <div><i class="fa-solid fa-wine-bottle"></i></div>
+      <p>Vineyards</p>
+    </div>
+    <div class="filter" data-category="Treehouses">
+      <div><i class="fa-solid fa-warehouse"></i></div>
+      <p>Treehouses</p>
+    </div>
+    <div class="filter" data-category="Cabins">
+      <div><i class="fa-solid fa-house"></i></div>
+      <p>Cabins</p>
+    </div>
+    <div class="filter" data-category="Eco-Lodges">
+      <div><i class="fa-solid fa-leaf"></i></div>
+      <p>Eco-Lodges</p>
+    </div>
+    <div class="filter" data-category="apartment">
+      <div><i class="fa-solid fa-masks-theater"></i></div>
       <p>Apartment</p>
     </div>
-    <div class="filter " data-category="Apartment">
-      <div><i class="fa-solid fa-bed"></i></div>
-      <p>Rooms</p>
-    </div>
-    <div class="filter " data-category="Apartment">
-      <div><i class="fa-solid fa-mountain-city"></i></div>
-      <p>Iconic Cities</p>
-    </div>
-    <div class="filter " data-category="Apartment">
-      <div><i class="fa-solid fa-mountain-sun"></i></div>
-      <p>Mountain</p>
-    </div>
-    <div class="filter " data-category="Apartment">
-      <div><i class="fa-brands fa-fort-awesome"></i></div>
-      <p>Castles</p>
-    </div>
-    <div class="filter " data-category="Apartment">
-      <div><i class="fa-solid fa-person-swimming"></i></div>
-      <p>Amazing Pools</p>
-    </div>
-    <div class="filter " data-category="Apartment">
-      <div><i class="fa-solid fa-tractor"></i></div>
-      <p>Farms</p>
-    </div>
-    <div class="filter "data-category="Apartment">
-      <div><i class="fa-solid fa-landmark-dome"></i></div>
-      <p>Historical Homes</p>
-    </div>
-    <div class="filter " data-category="Apartment">
-      <div><i class="fa-solid fa-campground"></i></div>
-      <p>Camping</p>
-    </div>
-    <div class="filter " data-category="Apartment">
-      <div><i class="fa-solid fa-snowman"></i></div>
-      <p>Arctic</p>
-    </div>
-    <div class="filter " data-category="Apartment">
+    <div class="filter" data-category="Beach">
       <div><i class="fa-solid fa-umbrella-beach"></i></div>
       <p>Beach</p>
     </div>
-    <div class="filter " data-category="Apartment">
-      <div><i class="fa-solid fa-house-user"></i></div>
-      <p>Tiny Homes</p>
+    <div class="filter" data-category="Historical">
+      <div><i class="fa-solid fa-landmark"></i></div>
+      <p>Historical Homes</p>
     </div>
-    <div class="filter " data-category="Apartment">
+    <div class="filter" data-category="Camping">
+      <div><i class="fa-solid fa-campground"></i></div>
+      <p>Camping</p>
+    </div>
+    <div class="filter" data-category="Domes">
       <div><i class="fa-solid fa-igloo"></i></div>
       <p>Domes</p>
     </div>
-    <div class="filter " data-category="Apartment">
+    <div class="filter" data-category="Boats">
       <div><i class="fa-solid fa-sailboat"></i></div>
       <p>Boats</p>
     </div>
+    <div class="filter" data-category="Farms">
+      <div><i class="fa-solid fa-tractor"></i></div>
+      <p>Farms</p>
+    </div>
+    <div class="filter" data-category="Pools">
+      <div><i class="fa-solid fa-person-swimming"></i></div>
+      <p>Swimming Pools</p>
+    </div>
+    <div class="filter" data-category="Castles">
+      <div><i class="fa-solid fa-chess-rook"></i></div>
+      <p>Castles</p>
+    </div>
+    <div class="filter" data-category="Arctic">
+      <div><i class="fa-solid fa-snowflake"></i></div>
+      <p>Arctic</p>
+    </div>
+    <div class="filter" data-category="Tiny-Homes">
+      <div><i class="fa-solid fa-house-chimney"></i></div>
+      <p>Tiny Homes</p>
+    </div>
+    
+    
   </div>
 
 <!-- IMAGE SLIDER -->
@@ -237,32 +262,5 @@
     <% } %>
   </div>
 
-  <script>
-    const filters = document.querySelectorAll('.filter');
-    const listings = document.querySelectorAll('.listing-card');
-
-    filters.forEach((filter)=>{
-      filter.addEventListener('click',()=>{
-        const selectedCategory = filter.getAttribute('data-category');
-
-        filters.forEach((f) => {
-          f.classList.remove('active');
-        });
-
-        listings.forEach((listing) => {
-          const listingCategory = listing.getAttribute('data-category');
-          if(selectedCategory === 'all' || listingCategory === selectedCategory) {
-            listing.style.display = 'block'; //show the listing
-          }else{
-            listing.style.display = 'none'; //hide listing
-          }
-        });
-        //layout after filtering
-        setTimeout(() => {
-          const row = document.querySelector('.row');
-          row.style.display = 'flex';
-        }, 100);
-      });
-    });
-  </script>
+  <script src="../../public/js/script.js"></script>
 </body>

@@ -67,18 +67,56 @@
       </div>
       <div class="mb-3">
         <label for="category" class="form-label">Category</label>
-        <input
+        <select
           name="listing[category]"
-          placeholder="Enter Category"
-          type="text"
+          id="category"
           class="form-control"
-          value="<%= listing.category %>"
           required
+          onchange="toggleOtherCategory()"
+        >
+          <option value="" disabled selected>Select a Category</option>
+          <option value="Luxury">Luxury Stays</option>
+          <option value="Caves">Caves</option>
+          <option value="Jungle">Jungle Retreats</option>
+          <option value="Desert">Desert Adventures</option>
+          <option value="Islands">Islands</option>
+          <option value="Vineyards">Vineyards</option>
+          <option value="Treehouses">Treehouses</option>
+          <option value="Cabins">Cabins</option>
+          <option value="Eco-Lodges">Eco-Lodges</option>
+          <option value="Apartment">Apartment</option>
+          <option value="Beach">Beach</option>
+          <option value="Historical">Historical Homes</option>
+          <option value="Camping">Camping</option>
+          <option value="Domes">Domes</option>
+          <option value="Boats">Boats</option>
+          <option value="Farms">Farms</option>
+          <option value="Pools">Swimming Pools</option>
+          <option value="Castles">Castles</option>
+          <option value="Arctic">Arctic</option>
+          <option value="Tiny-Homes">Tiny Homes</option>
+          <option value="Other">Other</option>
+        </select>
+        <div class="invalid-feedback">
+          Select the category of this location.
+        </div>
+      </div>
+
+      <div class="mb-3" id="otherCategoryInput" style="display: none">
+        <label for="other-category" class="form-label"
+          >Specify Other Category</label
+        >
+        <input
+          type="text"
+          name="listing[other_category]"
+          id="other-category"
+          class="form-control"
+          placeholder="Enter your category"
         />
-        <div class="invalid-feedback">Enter Category of this Location</div>
       </div>
      
       <button class="btn btn-dark edit-btn mt-3">Edit</button>
     </form>
   </div>
 </div>
+<script src="../../public/js/script.js"></script>
