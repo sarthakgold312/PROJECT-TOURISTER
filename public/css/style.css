@@ -1,14 +1,11 @@
 body{
-    font-family: cursive !important;
+    font-family:Georgia, 'Times New Roman', Times, serif !important;
     display: flex;
     justify-content: center;
     flex-direction: column;
     min-height: 100vh;
     min-width: 500px;
-}
 
-body{
-    padding-top: 70px;
 }
 
 .container{

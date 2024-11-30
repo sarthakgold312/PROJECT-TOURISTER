@@ -12,21 +12,14 @@
     display: inline;
     margin-right: 0.5rem;
   }
-  .navbar{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-  }
-  search-inp{
+ .search-inp{
     border: 20px;
     padding: 0.5rem 3rem 0.5rem  3rem;
     font-size: 1rem;
   }
 </style>
 
-<nav class="navbar  border-bottom sticky-top">
+<nav class="navbar navbar-expand-md border-bottom sticky-top">
   <div class="container-fluid bg-light">
     <a class="navbar-brand" href="/listings">
       <i class="fa-solid logo fa-globe">TripTales.in</i>
@@ -53,10 +46,9 @@
             type="search"
             name="query"
             placeholder="Search Destination"
-            autocomplete="off" 
           />
           <button class="btn btn-search btn-search" type="submit">
-            <i class="fa-solid fa-magnifying-glass">Search</i>
+            <i class="fa-solid fa-magnifying-glass"></i> Search
           </button>
         </form>
       </div>
